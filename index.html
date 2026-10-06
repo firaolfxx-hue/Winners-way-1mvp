@@ -1,0 +1,1205 @@
+<!DOCTYPE html>
+<html lang="en" data-lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="Winners Way Church: worship, prayer and community. Free guest house with food, lodging and prayer.">
+<meta name="theme-color" content="#10223F">
+<meta name="referrer" content="no-referrer">
+<title>Winners Way Church</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,500;6..72,700&family=Instrument+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+--bg:#F3F5F8;--paper:#fff;--ink:#10223F;--muted:#55627A;
+--navy:#10223F;--navy-2:#1A3566;--on-navy:#EAF0FA;
+--gold:#C58A12;--gold-2:#E0A828;--gold-soft:#F8EBCB;
+--blue:#244C9A;--blue-soft:#DBE6FB;
+--line:#D9DFEA;--err:#B42318;--ok:#17703A;
+--body:"Instrument Sans",system-ui,sans-serif;
+--head:Newsreader,Georgia,serif;
+--shadow-sm:0 1px 3px rgba(16,34,63,.06);
+--shadow-md:0 4px 14px rgba(16,34,63,.09);
+--shadow-lg:0 14px 40px rgba(16,34,63,.14);
+--r:10px;--r-lg:16px;--pill:99px;
+padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media(prefers-color-scheme:dark){:root:not([data-theme=light]){
+--bg:#0B1528;--paper:#12203A;--ink:#E8EEF9;--muted:#9AA9C6;
+--navy:#070F1E;--navy-2:#0F2244;--on-navy:#E8EEF9;
+--gold:#E3A935;--gold-2:#F0BC4A;--gold-soft:#3A2D0E;
+--blue:#7DA2F5;--blue-soft:#152A56;
+--line:#233253;--err:#F97066;--ok:#4ADE80;
+--shadow-sm:0 1px 3px rgba(0,0,0,.4);--shadow-md:0 4px 14px rgba(0,0,0,.45);--shadow-lg:0 14px 40px rgba(0,0,0,.55)}}
+:root[data-theme=dark]{
+--bg:#0B1528;--paper:#12203A;--ink:#E8EEF9;--muted:#9AA9C6;
+--navy:#070F1E;--navy-2:#0F2244;--on-navy:#E8EEF9;
+--gold:#E3A935;--gold-2:#F0BC4A;--gold-soft:#3A2D0E;
+--blue:#7DA2F5;--blue-soft:#152A56;
+--line:#233253;--err:#F97066;--ok:#4ADE80;
+--shadow-sm:0 1px 3px rgba(0,0,0,.4);--shadow-md:0 4px 14px rgba(0,0,0,.45);--shadow-lg:0 14px 40px rgba(0,0,0,.55)}
+html{scroll-behavior:smooth;height:100%;scroll-padding-top:72px}
+*,*::before,*::after{box-sizing:border-box}
+[hidden]{display:none!important}
+body{margin:0;min-height:100%;background:var(--bg);color:var(--ink);font:400 17px/1.65 var(--body);-webkit-font-smoothing:antialiased}
+h1,h2,h3{font-family:var(--head);font-weight:700;line-height:1.15;margin:0 0 .5em;letter-spacing:-.015em}
+h1{font-size:clamp(2.3rem,7vw,4.4rem)}
+h2{font-size:clamp(1.6rem,4vw,2.3rem)}
+h3{font-size:1.2rem}
+p{margin:0 0 1em;max-width:62ch}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--gold);outline-offset:3px;border-radius:6px}
+.wrap{max-width:1120px;margin:0 auto;padding:0 20px}
+.skip{position:absolute;left:-9999px;top:0;background:var(--gold);color:#000;padding:10px 16px;z-index:99;font-weight:700;border-radius:0 0 8px 0}
+.skip:focus{left:0}
+header{position:sticky;top:0;z-index:30;background:color-mix(in srgb,var(--bg) 94%,transparent);border-bottom:1px solid var(--line);backdrop-filter:saturate(1.3) blur(10px);-webkit-backdrop-filter:saturate(1.3) blur(10px)}
+header .wrap{display:flex;align-items:center;gap:12px;min-height:64px;padding-top:10px;padding-bottom:10px}
+.brand{font:700 1.25rem var(--head);text-decoration:none;display:flex;align-items:center;gap:10px;margin-right:auto;color:var(--ink);white-space:nowrap}
+.mark{width:38px;height:38px;border-radius:50%;background:linear-gradient(135deg,var(--navy),var(--navy-2));display:grid;place-items:center;flex:none;box-shadow:var(--shadow-sm)}
+.mark svg{width:20px;height:20px;fill:var(--gold)}
+.brand .name{display:flex;flex-direction:column;line-height:1.1}
+.brand .name small{font:600 .68rem var(--body);color:var(--muted);letter-spacing:.08em;text-transform:uppercase}
+.icon-btn{border:1.5px solid var(--line);background:var(--paper);color:var(--ink);border-radius:var(--pill);padding:7px 13px;font:700 .85rem var(--body);cursor:pointer;transition:border-color .2s,color .2s}
+.icon-btn:hover{border-color:var(--gold);color:var(--gold)}
+#burger{width:44px;height:44px;padding:0;display:grid;place-items:center;flex:none}
+#burger .bars{position:relative;display:block;width:20px;height:2px;background:var(--ink);border-radius:2px;transition:background .2s}
+#burger .bars::before,#burger .bars::after{content:"";position:absolute;left:0;width:20px;height:2px;background:var(--ink);border-radius:2px;transition:transform .25s ease,top .2s ease,background .2s}
+#burger .bars::before{top:-6.5px}
+#burger .bars::after{top:6.5px}
+#burger[aria-expanded="true"]{background:var(--navy);border-color:var(--navy)}
+#burger[aria-expanded="true"] .bars,#burger[aria-expanded="true"] .bars::before,#burger[aria-expanded="true"] .bars::after{background:#fff}
+#burger[aria-expanded="true"] .bars{background:transparent}
+#burger[aria-expanded="true"] .bars::before{top:0;transform:rotate(45deg)}
+#burger[aria-expanded="true"] .bars::after{top:0;transform:rotate(-45deg)}
+
+.drawer{position:fixed;inset:0;z-index:50;pointer-events:none}
+.drawer .scrim{position:absolute;inset:0;background:rgba(7,15,30,.6);opacity:0;transition:opacity .25s ease}
+.drawer .panel{position:absolute;top:0;right:0;bottom:0;width:min(370px,88vw);background:var(--paper);box-shadow:var(--shadow-lg);transform:translateX(100%);transition:transform .3s cubic-bezier(.2,.8,.2,1);display:flex;flex-direction:column;padding-top:calc(env(safe-area-inset-top,0px) + 20px);padding-bottom:calc(env(safe-area-inset-bottom,0px) + 20px);overflow-y:auto}
+.drawer.open{pointer-events:auto}
+.drawer.open .scrim{opacity:1}
+.drawer.open .panel{transform:translateX(0)}
+.drawer .dhead{display:flex;align-items:center;gap:10px;padding:8px 20px 16px;border-bottom:1px solid var(--line)}
+.drawer .dhead .brand{flex:1;font-size:1.05rem;margin:0}
+.drawer .dclose{width:40px;height:40px;border:0;background:var(--bg);border-radius:10px;cursor:pointer;font-size:1.3rem;color:var(--ink);display:grid;place-items:center}
+.drawer nav{display:flex;flex-direction:column;padding:16px 12px;gap:2px}
+.drawer nav a{display:flex;align-items:center;gap:14px;padding:14px 16px;border-radius:12px;text-decoration:none;font:600 1.02rem var(--body);color:var(--ink);transition:background .15s,color .15s}
+.drawer nav a:hover{background:var(--bg)}
+.drawer nav a[aria-current="page"]{background:var(--blue-soft);color:var(--navy);font-weight:700}
+.drawer nav a .ico{width:22px;height:22px;color:var(--gold);flex:none;display:grid;place-items:center}
+.drawer nav a .ico svg{width:100%;height:100%;fill:currentColor}
+.drawer nav a.cta{background:linear-gradient(135deg,var(--navy),var(--navy-2));color:#fff;margin-top:10px;justify-content:center}
+.drawer nav a.cta .ico{color:var(--gold)}
+.drawer nav a.cta[aria-current="page"]{background:var(--navy)}
+.drawer .dfoot{margin-top:auto;padding:16px 24px;border-top:1px solid var(--line);font-size:.85rem;color:var(--muted)}
+.drawer .dfoot a{color:var(--gold);text-decoration:none;font-weight:600}
+
+.page{display:none}.page.on{display:block}
+.sec{padding:64px 0}
+.alt{background:var(--paper);border-block:1px solid var(--line)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:13px 24px;border-radius:var(--pill);border:2px solid var(--navy);font:700 1rem var(--body);text-decoration:none;cursor:pointer;background:transparent;color:var(--ink);transition:transform .15s,box-shadow .2s,background .2s;box-shadow:var(--shadow-sm)}
+.btn:hover{transform:translateY(-1px);box-shadow:var(--shadow-md)}
+.btn.fill{background:linear-gradient(135deg,var(--navy),var(--navy-2));color:#fff;border-color:transparent}
+.btn.fill:hover{background:linear-gradient(135deg,var(--navy-2),var(--navy))}
+.btn.gold{background:linear-gradient(135deg,var(--gold),var(--gold-2));color:#1a1200;border-color:transparent}
+.btn.sm{padding:7px 14px;font-size:.88rem;border-width:1.5px;box-shadow:none}
+.btn:disabled{opacity:.55;cursor:not-allowed;transform:none}
+.btns{display:flex;flex-wrap:wrap;gap:12px;margin-top:22px}
+
+.photo{position:relative;overflow:hidden;background:repeating-linear-gradient(135deg,var(--paper) 0 14px,var(--bg) 14px 28px);border:1px solid var(--line);aspect-ratio:4/5;border-radius:var(--pill) var(--pill) var(--r) var(--r)}
+.photo.land{aspect-ratio:16/10;border-radius:var(--r)}
+.photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+
+.hero{padding:56px 0 72px;position:relative;overflow:hidden}
+.hero::before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 85% 15%,color-mix(in srgb,var(--gold) 14%,transparent),transparent 55%);pointer-events:none}
+.hero .wrap{display:grid;grid-template-columns:1.3fr .7fr;gap:48px;align-items:end;position:relative;z-index:1}
+.lead{font-size:1.2rem;color:var(--muted)}
+.split{display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:center}
+@media(max-width:820px){.hero .wrap,.split{grid-template-columns:1fr}.hero .photo{max-width:320px;margin:0 auto}.sec{padding:48px 0}}
+.band{background:linear-gradient(135deg,var(--navy),var(--navy-2));color:var(--on-navy);position:relative;overflow:hidden}
+.band::before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 20% 80%,color-mix(in srgb,var(--gold) 20%,transparent),transparent 50%);pointer-events:none}
+.band>*{position:relative;z-index:1}
+.band .lead,.band p{color:#C5D2EA}
+.band .btn.gold{box-shadow:var(--shadow-md)}
+.timeline{list-style:none;margin:0;padding:0;border-left:3px solid var(--gold)}
+.timeline li{padding:0 0 22px 22px;position:relative}
+.timeline li::before{content:"";position:absolute;left:-9.5px;top:8px;width:15px;height:15px;border-radius:50%;background:var(--gold);box-shadow:0 0 0 3px var(--bg)}
+.timeline h3{margin:0 0 .2em}
+.timeline p{margin:0;color:var(--muted)}
+.cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:30px}
+.cols h3{border-top:3px solid var(--gold);padding-top:12px}
+.cols p{color:var(--muted)}
+table{border-collapse:collapse;width:100%;max-width:640px}
+td,th{text-align:left;padding:14px 8px;border-bottom:1px solid var(--line)}
+th{color:var(--muted);font-weight:600;font-size:.9rem;text-transform:uppercase;letter-spacing:.04em}
+details.faq{border-bottom:1px solid var(--line);max-width:720px}
+details.faq summary{padding:16px 0;font-weight:700;cursor:pointer}
+details.faq p{color:var(--muted)}
+
+form{max-width:560px}
+label{display:block;font-weight:700;margin:16px 0 6px;font-size:.95rem}
+input,textarea,select{width:100%;padding:12px 14px;font:inherit;color:var(--ink);background:var(--paper);border:1.5px solid var(--line);border-radius:var(--r);transition:border-color .2s,box-shadow .2s}
+input:focus,textarea:focus,select:focus{outline:none;border-color:var(--blue);box-shadow:0 0 0 3px color-mix(in srgb,var(--blue) 22%,transparent)}
+textarea{min-height:120px;resize:vertical}
+.err{color:var(--err);font-size:.9rem;min-height:1.2em;margin:4px 0 0}
+.check{display:flex;gap:10px;align-items:flex-start;font-weight:400;margin-top:18px;padding:14px;border:1.5px solid var(--line);border-radius:var(--r);background:var(--paper);cursor:pointer}
+.check:has(input:checked){border-color:var(--gold);background:var(--gold-soft)}
+.check input{width:auto;margin-top:5px;accent-color:var(--gold)}
+.hp{position:absolute;left:-9999px}
+.note{background:var(--gold-soft);border-left:4px solid var(--gold);padding:14px 16px;border-radius:var(--r);margin:0 0 14px;max-width:560px;font-size:.95rem;display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+.note button{background:none;border:0;color:var(--gold);font:700 .9rem var(--body);text-decoration:underline;cursor:pointer;padding:0}
+.done{border:2px solid var(--ok);border-radius:var(--r);padding:22px;max-width:560px;background:var(--paper)}
+
+footer{background:linear-gradient(135deg,var(--navy),var(--navy-2));color:var(--on-navy);padding:44px 0 28px;font-size:.95rem}
+footer .wrap{display:flex;flex-wrap:wrap;gap:28px;justify-content:space-between}
+footer p{margin:0 0 6px}
+footer a{color:var(--gold)}
+
+body.staffmode>header,body.staffmode>footer{display:none}
+.sbar{background:linear-gradient(135deg,var(--navy),var(--navy-2));color:#fff}
+.sbar .wrap{display:flex;gap:14px;align-items:center;min-height:58px;flex-wrap:wrap;padding-top:10px;padding-bottom:10px}
+.sbar b{font:700 1.15rem var(--head);margin-right:auto;display:flex;align-items:center;gap:10px}
+.sbar .mark{width:30px;height:30px;background:rgba(255,255,255,.12);box-shadow:none}
+.sbar a{color:#C5D2EA;font-size:.9rem;text-decoration:none}
+.sbar a:hover{color:#fff}
+.sbar .who{display:flex;align-items:center;gap:10px;font-size:.9rem}
+.login{max-width:400px;margin:48px auto;background:var(--paper);border:1px solid var(--line);border-radius:var(--r-lg);padding:32px;box-shadow:var(--shadow-md)}
+.login h1{font-size:1.8rem;margin-bottom:.6em}
+.login .btn.fill{width:100%;margin-top:20px}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:24px 0 8px}
+.stats div{background:var(--paper);border:1px solid var(--line);border-radius:var(--r);padding:16px 18px;box-shadow:var(--shadow-sm);position:relative;overflow:hidden}
+.stats div::before{content:"";position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--gold),var(--gold-2))}
+.stats b{display:block;font:700 2rem var(--head);color:var(--navy);line-height:1.1}
+.stats span{color:var(--muted);font-size:.86rem;font-weight:600}
+.bar{height:6px;background:var(--line);border-radius:9px;margin-top:8px;overflow:hidden}
+.bar u{display:block;height:100%;background:linear-gradient(90deg,var(--gold),var(--gold-2));width:0;transition:width .3s}
+.tabs{display:flex;gap:6px;flex-wrap:wrap;margin:20px 0 12px;align-items:center}
+.tabs button[role=tab]{border:1.5px solid var(--line);background:var(--paper);color:var(--muted);padding:9px 18px;border-radius:var(--pill);font:700 .92rem var(--body);cursor:pointer;transition:all .2s}
+.tabs button[role=tab]:hover{border-color:var(--gold);color:var(--gold)}
+.tabs button[aria-selected=true]{background:linear-gradient(135deg,var(--navy),var(--navy-2));border-color:transparent;color:#fff;box-shadow:var(--shadow-sm)}
+.tabs .btn{margin-left:auto}
+.tools{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:6px}
+.tools input{flex:1;min-width:180px}
+.tools select{width:auto}
+.meta{color:var(--muted);font-size:.85rem}
+#upd{display:flex;align-items:center;gap:8px}
+#upd .dot{width:8px;height:8px;border-radius:50%;background:var(--ok);display:inline-block;box-shadow:0 0 0 3px color-mix(in srgb,var(--ok) 25%,transparent);animation:pulse 2s infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.4}}
+.row{display:flex;gap:16px;background:var(--paper);border:1px solid var(--line);border-left:4px solid var(--blue);border-radius:var(--r);padding:16px;margin-bottom:12px;flex-wrap:wrap;box-shadow:var(--shadow-sm);transition:box-shadow .2s}
+.row:hover{box-shadow:var(--shadow-md)}
+.row.prio{border-left-color:var(--gold)}
+.badge{min-width:48px;height:48px;border-radius:10px;background:var(--bg);display:grid;place-items:center;font-weight:800;font-size:.85rem;padding:0 6px;text-align:center;line-height:1.1;color:var(--navy)}
+.info{flex:1;min-width:220px}
+.info h3{font:700 1.08rem var(--body);margin:0 0 6px;word-break:break-word}
+.info h3 a{color:var(--blue);text-decoration:none}
+.info h3 a:hover{text-decoration:underline}
+.chip{display:inline-block;font-size:.75rem;font-weight:700;padding:3px 10px;border-radius:var(--pill);background:var(--bg);color:var(--muted);margin:0 5px 5px 0}
+.chip.gold{background:var(--gold-soft);color:#7A4F00}
+.chip.ok{background:color-mix(in srgb,var(--ok) 15%,transparent);color:var(--ok)}
+.chip.warn{background:color-mix(in srgb,var(--err) 15%,transparent);color:var(--err)}
+.acts{display:flex;flex-direction:column;gap:8px;align-items:flex-end}
+.acts .r{display:flex;gap:8px;flex-wrap:wrap;justify-content:flex-end}
+.lnk{background:none;border:0;padding:2px 0;font:600 .85rem var(--body);color:var(--muted);text-decoration:underline;cursor:pointer}
+.lnk:hover{color:var(--gold)}
+.lnk.bad{color:var(--err)}
+details.tl{border:0;background:transparent;padding:4px 0 0;margin:0;max-width:none}
+.tl summary{font-size:.85rem;color:var(--muted);font-weight:600;cursor:pointer;padding:0}
+.tl ul{margin:8px 0 0;padding-left:20px;font-size:.85rem;color:var(--muted)}
+.tl li{margin-bottom:3px}
+.empty{border:2px dashed var(--line);border-radius:var(--r);padding:56px 20px;text-align:center;color:var(--muted);background:var(--paper)}
+dialog{border:0;border-radius:var(--r-lg);padding:0;width:min(480px,calc(100% - 28px));background:var(--bg);color:var(--ink);box-shadow:var(--shadow-lg)}
+dialog::backdrop{background:rgba(7,15,30,.7);backdrop-filter:blur(4px);-webkit-backdrop-filter:blur(4px)}
+dialog form{padding:26px;max-width:none;margin:0}
+dialog h2{font-size:1.5rem;margin-bottom:1em}
+.dacts{display:flex;gap:10px;justify-content:flex-end;margin-top:22px}
+#toast{position:fixed;left:50%;transform:translateX(-50%);bottom:calc(18px + env(safe-area-inset-bottom,0px));background:linear-gradient(135deg,var(--navy),var(--navy-2));color:#fff;padding:12px 20px;border-radius:var(--pill);z-index:60;font-weight:600;display:flex;gap:14px;max-width:calc(100% - 24px);box-shadow:var(--shadow-lg);align-items:center}
+#toast button{background:none;border:0;color:var(--gold);font:700 1rem var(--body);text-decoration:underline;cursor:pointer}
+@media(max-width:700px){.acts{align-items:flex-start;width:100%}.acts .r{justify-content:flex-start}.stats{grid-template-columns:1fr 1fr}.stats div:first-child{grid-column:1/-1}.brand .name small{display:none}}
+@media(max-width:480px){.stats{grid-template-columns:1fr}.stats div:first-child{grid-column:auto}}
+@media(prefers-reduced-motion:no-preference){
+  .hero h1{animation:fadeUp .6s ease-out}
+  .hero p.lead{animation:fadeUp .6s .08s ease-out backwards}
+  .hero .btns{animation:fadeUp .6s .16s ease-out backwards}
+  @keyframes fadeUp{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+}
+@media print{header,footer,.tabs,.tools,.acts,#toast,.sbar,.skip,.drawer{display:none!important}body{background:#fff;color:#000}.row{break-inside:avoid;border-color:#999}.page{display:none!important}.page.on{display:block!important}}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header><div class="wrap">
+<a class="brand" href="#home">
+<span class="mark"><svg viewBox="0 0 24 24"><path d="M10.5 2h3v6.5H20v3h-6.5V22h-3V11.5H4v-3h6.5z"/></svg></span>
+<span class="name"><span>Winners Way</span><small>Church</small></span>
+</a>
+<button class="icon-btn" id="lang" type="button" aria-label="Language">EN</button>
+<button class="icon-btn" id="burger" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="drawer">
+<span class="bars"></span>
+</button>
+</div></header>
+
+<div class="drawer" id="drawer" aria-hidden="true">
+<div class="scrim" data-dclose></div>
+<aside class="panel" role="dialog" aria-modal="true" aria-label="Main menu">
+<div class="dhead">
+<a class="brand" href="#home" data-dclose>
+<span class="mark"><svg viewBox="0 0 24 24"><path d="M10.5 2h3v6.5H20v3h-6.5V22h-3V11.5H4v-3h6.5z"/></svg></span>
+<span class="name"><span>Winners Way</span><small>Church</small></span>
+</a>
+<button class="dclose" type="button" data-dclose aria-label="Close menu">✕</button>
+</div>
+<nav id="nav" aria-label="Main">
+<a href="#home"><span class="ico"><svg viewBox="0 0 24 24"><path d="M12 3l9 8h-3v10h-5v-6h-2v6H6V11H3z"/></svg></span><span>Home</span></a>
+<a href="#about"><span class="ico"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 100 20 10 10 0 000-20zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg></span><span>About</span></a>
+<a href="#services"><span class="ico"><svg viewBox="0 0 24 24"><path d="M12 2l3 6h6l-5 4 2 6-6-4-6 4 2-6-5-4h6z"/></svg></span><span>Services</span></a>
+<a href="#contact"><span class="ico"><svg viewBox="0 0 24 24"><path d="M20 4H4a2 2 0 00-2 2v12a2 2 0 002 2h16a2 2 0 002-2V6a2 2 0 00-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg></span><span>Contact</span></a>
+<a href="#guesthouse" class="cta"><span class="ico"><svg viewBox="0 0 24 24"><path d="M7 14a3 3 0 100-6 3 3 0 000 6zm10 0a3 3 0 100-6 3 3 0 000 6zM2 20v-2c0-2 3-3 5-3s5 1 5 3v2H2zm10 0v-2c0-2 3-3 5-3s5 1 5 3v2H12z"/></svg></span><span>Guest house</span></a>
+</nav>
+<div class="dfoot">
+<p>Our guest house is free: food, lodging and prayer.</p>
+<a href="#staff" data-dclose>Staff sign in →</a>
+</div>
+</aside>
+</div>
+
+<main id="main">
+<!-- HOME -->
+<div class="page" id="home">
+<section class="hero"><div class="wrap">
+<div>
+<h1 tabindex="-1">We started victorious. We finished victorious.</h1>
+<p class="lead">Come as you are. A church for worship, prayer and real friendship. Everyone is welcome, and our guest house is free.</p>
+<div class="btns">
+<a class="btn fill" href="#guesthouse">Register for the guest house</a>
+<a class="btn" href="#services">Service times</a>
+</div>
+</div>
+<div class="photo" data-img="hero.jpg" data-alt="Winners Way congregation"></div>
+</div></section>
+
+<section class="sec alt"><div class="wrap split">
+<div>
+<h2>Your first Sunday</h2>
+<ol class="timeline">
+<li><h3>Arrive</h3><p>A welcome team greets you at the door and shows you a seat.</p></li>
+<li><h3>Worship</h3><p>Sing, listen and pray with us. Sit, stand or simply watch.</p></li>
+<li><h3>Ask for prayer</h3><p>Tell our team what you need prayer for. No one is pressured.</p></li>
+<li><h3>Stay in touch</h3><p>Meet people and join a ministry when you are ready.</p></li>
+</ol>
+</div>
+<div class="photo land" data-img="service.jpg" data-alt="A Sunday service"></div>
+</div></section>
+
+<section class="sec band"><div class="wrap">
+<h2>The guest house costs nothing.</h2>
+<p class="lead">Food, a bed and prayer, with no payment of any kind. Send your details and a church worker will call you.</p>
+<div class="btns"><a class="btn gold" href="#guesthouse">Register now</a></div>
+</div></section>
+</div>
+
+<!-- ABOUT -->
+<div class="page" id="about"><div class="wrap sec">
+<h1 tabindex="-1">About us</h1>
+<div class="split">
+<div>
+<p>Winners Way Church is a community where people meet God, grow in faith and carry each other through life.</p>
+<p>We believe in the Bible, in prayer and in giving freely what we have received. The guest house is where that belief becomes practical.</p>
+</div>
+<div class="photo land" data-img="about.jpg" data-alt="Our church"></div>
+</div>
+<div class="cols" style="margin-top:48px">
+<div><h3>The Word</h3><p>The Bible guides what we teach and do.</p></div>
+<div><h3>Prayer</h3><p>We pray for each other and for anyone who asks.</p></div>
+<div><h3>Community</h3><p>No one walks alone. We belong to one another.</p></div>
+<div><h3>Generosity</h3><p>We give freely, starting with our guest house.</p></div>
+</div>
+</div></div>
+
+<!-- SERVICES -->
+<div class="page" id="services"><div class="wrap sec">
+<h1 tabindex="-1">Service times</h1>
+<table><thead><tr><th>Day</th><th>Meeting</th><th>Time</th></tr></thead><tbody id="svcRows"></tbody></table>
+<p style="margin-top:28px">New here? Wear what you like. Children are welcome. Arrive a little early and our team will help you settle in.</p>
+</div></div>
+
+<!-- CONTACT -->
+<div class="page" id="contact"><div class="wrap sec">
+<h1 tabindex="-1">Find us</h1>
+<div id="contactList"></div>
+<div class="btns" id="contactBtns"></div>
+</div></div>
+
+<!-- GUEST HOUSE -->
+<div class="page" id="guesthouse"><div class="wrap sec">
+<h1 tabindex="-1">Free guest house</h1>
+<p class="lead">Meals, a bed and prayer at no cost. Tell us who you are and what to pray for.</p>
+<div class="cols" style="margin:32px 0 48px">
+<div><h3>Food</h3><p>Meals for every guest.</p></div>
+<div><h3>A place to sleep</h3><p>A clean, safe bed under the church's care.</p></div>
+<div><h3>Prayer</h3><p>Our team prays with you and for you.</p></div>
+</div>
+<h2>Register</h2>
+<p>After you send this form, a church worker phones you and places you on the waiting list in order.</p>
+<div class="note" id="draftNote" hidden>
+<span>Your unfinished form is saved on this device only.</span>
+<button class="lnk" type="button" id="clearDraft">Clear</button>
+</div>
+<form id="gform" novalidate>
+<label for="fullName">Full name</label>
+<input id="fullName" autocomplete="name" maxlength="80">
+<p class="err" id="e-name" role="alert"></p>
+<label for="phone">Phone number</label>
+<input id="phone" type="tel" inputmode="tel" autocomplete="tel" placeholder="0911 22 33 44" maxlength="20">
+<p class="err" id="e-phone" role="alert"></p>
+<label for="topic">Prayer request</label>
+<textarea id="topic" maxlength="1000"></textarea>
+<p class="err" id="e-topic" role="alert"></p>
+<label class="check"><input type="checkbox" id="consent"><span>I agree that the church may contact me about the guest house and prayer.</span></label>
+<p class="err" id="e-consent" role="alert"></p>
+<input class="hp" id="website" tabindex="-1" autocomplete="off" aria-hidden="true">
+<p class="err" id="e-form" role="alert"></p>
+<button class="btn fill" type="submit" id="send">Send registration</button>
+</form>
+<div class="done" id="done" hidden role="status"><h3>Registration received</h3><p style="margin:0">A church worker will review your request and call you soon. Thank you.</p></div>
+<h2 style="margin-top:56px">Common questions</h2>
+<details class="faq"><summary>Is it really free?</summary><p>Yes. Food, lodging and prayer cost nothing.</p></details>
+<details class="faq"><summary>What happens after I send the form?</summary><p>A church worker sees your registration, phones you and adds you to the waiting list.</p></details>
+<details class="faq"><summary>How long can I stay?</summary><p>Stays are usually up to <span id="maxDays"></span> days. The team confirms this when they call.</p></details>
+</div></div>
+
+<!-- STAFF -->
+<div class="page" id="staff">
+<div class="sbar"><div class="wrap">
+<b><span class="mark"><svg viewBox="0 0 24 24"><path d="M10.5 2h3v6.5H20v3h-6.5V22h-3V11.5H4v-3h6.5z"/></svg></span>Winners Way <span style="color:var(--gold)">Staff</span></b>
+<a href="#home">Public site</a>
+<span class="who" id="who" hidden>
+<span id="email" style="color:#C5D2EA"></span>
+<button class="btn sm" id="out" type="button" style="color:#fff;border-color:#fff">Sign out</button>
+</span>
+</div></div>
+<div class="wrap" style="padding-bottom:64px">
+<section class="login" id="login" hidden>
+<h1 tabindex="-1">Staff sign in</h1>
+<form id="lform" novalidate>
+<label for="lemail">Email</label><input id="lemail" type="email" autocomplete="username">
+<label for="lpass">Password</label><input id="lpass" type="password" autocomplete="current-password">
+<p class="err" id="lerr" role="alert"></p>
+<button class="btn fill" id="lbtn" type="submit">Sign in</button>
+</form>
+</section>
+<section id="app" hidden>
+<div class="stats">
+<div><b id="n-w">0</b><span>Waiting</span></div>
+<div><b id="n-s">0</b><span>Staying now</span><div class="bar"><u id="capbar"></u></div></div>
+<div><b id="n-h">0</b><span>Stayed in total</span></div>
+</div>
+<div class="tabs" role="tablist">
+<button role="tab" data-tab="waiting" aria-selected="true" type="button">Waiting list</button>
+<button role="tab" data-tab="staying" aria-selected="false" type="button">Staying now</button>
+<button role="tab" data-tab="history" aria-selected="false" type="button">History</button>
+<button class="btn sm gold" id="add" type="button" style="margin-left:auto">+ New registration</button>
+</div>
+<div class="tools">
+<input id="q" type="search" placeholder="Search name, phone, request or room" aria-label="Search">
+<button class="btn sm" id="csv" type="button">Export CSV</button>
+<button class="btn sm" id="print" type="button">Print</button>
+<button class="btn sm" id="refresh" type="button">Refresh</button>
+</div>
+<p class="meta" id="upd"><span class="dot"></span><span id="updTxt">Loading…</span></p>
+<div id="list"></div>
+</section>
+</div>
+</div>
+</main>
+
+<footer><div class="wrap">
+<div>
+<p><b>Winners Way</b></p>
+<p>Our guest house is free: food, lodging and prayer.</p>
+</div>
+<div id="footContact"></div>
+<p style="width:100%;margin-top:8px;color:#93A2C2">
+© Winners Way Church. All rights reserved. · <a href="#staff" style="opacity:.7">Staff</a>
+</p>
+</div></footer>
+
+<dialog id="dAdd"><form id="fAdd" novalidate>
+<h2>New registration</h2>
+<label for="aName">Full name</label><input id="aName">
+<label for="aPhone">Phone number</label><input id="aPhone" type="tel">
+<label for="aTopic">Prayer request</label><textarea id="aTopic"></textarea>
+<label for="aStatus">Add as</label>
+<select id="aStatus">
+<option value="waiting">Waiting list</option>
+<option value="staying">Staying now</option>
+</select>
+<p class="err" id="aErr" role="alert"></p>
+<div class="dacts"><button type="button" class="btn sm" data-close>Cancel</button><button class="btn sm fill" type="submit">Save</button></div>
+</form></dialog>
+
+<dialog id="dRoom"><form id="fRoom">
+<h2>Check in</h2><p id="roomName" class="meta"></p>
+<label for="roomIn">Room or bed (optional)</label><input id="roomIn">
+<div class="dacts"><button type="button" class="btn sm" data-close>Cancel</button><button class="btn sm fill" type="submit">Confirm</button></div>
+</form></dialog>
+
+<dialog id="dNote"><form id="fNote">
+<h2>Staff note</h2><p id="noteName" class="meta"></p>
+<label for="noteIn">Note</label><textarea id="noteIn"></textarea>
+<div class="dacts"><button type="button" class="btn sm" data-close>Cancel</button><button class="btn sm fill" type="submit">Save</button></div>
+</form></dialog>
+
+<div id="toast" role="status" hidden></div>
+
+<script>
+/* ============================================================
+   CONFIG
+   ============================================================ */
+var CONFIG = {
+  supabaseUrl: "https://toxtmkllfngxejgisksn.supabase.co",
+  anonKey: "sb_publishable_0_1nXH0MqT3hEnWOs8NXQg_FgQbrP5G",
+  capacity: 10,
+  maxStayDays: 7,
+  idleMinutes: 30,
+  pollSeconds: 20,
+  church: { phone: "", email: "", address: "", hours: "", telegram: "", mapUrl: "" },
+  services: [
+    { day: "Sunday", meeting: "Worship service", time: "" },
+    { day: "Wednesday", meeting: "Prayer and Bible study", time: "" },
+    { day: "Friday", meeting: "Night prayer", time: "" }
+  ]
+};
+/* ============================================================ */
+
+(function () {
+  "use strict";
+  var C = CONFIG, LIVE = !!C.supabaseUrl;
+  var $ = function (s) { return document.querySelector(s); };
+  var $$ = function (s) { return document.querySelectorAll(s); };
+
+  /* ---------- Config-driven content ---------- */
+  $("#svcRows").innerHTML = C.services.map(function (s) {
+    return "<tr><td>" + esc(s.day) + "</td><td>" + esc(s.meeting) + "</td><td>" + esc(s.time || "Ask us") + "</td></tr>";
+  }).join("");
+
+  var c = C.church, rows = [
+    ["Address", c.address], ["Phone", c.phone], ["Email", c.email], ["Office hours", c.hours]
+  ].filter(function (r) { return r[1]; });
+  $("#contactList").innerHTML = rows.length
+    ? rows.map(function (r) { return "<p><b>" + esc(r[0]) + "</b><br>" + esc(r[1]) + "</p>"; }).join("")
+    : "<p>Contact details are coming soon.</p>";
+  var btns = "";
+  if (c.phone) btns += '<a class="btn fill" href="tel:' + esc(c.phone.replace(/\s/g, "")) + '">Call us</a>';
+  if (c.telegram) btns += '<a class="btn" target="_blank" rel="noopener" href="https://t.me/' + esc(c.telegram.replace("@", "")) + '">Message on Telegram</a>';
+  if (c.mapUrl) btns += '<a class="btn" target="_blank" rel="noopener" href="' + esc(c.mapUrl) + '">Open map</a>';
+  $("#contactBtns").innerHTML = btns;
+  $("#footContact").innerHTML = (c.phone ? "<p>" + esc(c.phone) + "</p>" : "") + (c.address ? "<p>" + esc(c.address) + "</p>" : "");
+  $("#maxDays").textContent = C.maxStayDays;
+
+  /* ---------- Photos ---------- */
+  $$(".photo").forEach(function (el) {
+    var im = new Image();
+    im.alt = el.dataset.alt || "";
+    im.loading = "lazy";
+    im.onload = function () { el.appendChild(im); };
+    im.src = "images/" + el.dataset.img;
+  });
+
+  /* ---------- Menu + routing ---------- */
+  var burger = $("#burger"), drawer = $("#drawer"), lastFocus = null;
+  function openDrawer() {
+    lastFocus = document.activeElement;
+    drawer.classList.add("open");
+    drawer.setAttribute("aria-hidden", "false");
+    burger.setAttribute("aria-expanded", "true");
+    document.body.style.overflow = "hidden";
+    var f = drawer.querySelector("nav a");
+    if (f) setTimeout(function () { f.focus(); }, 120);
+  }
+  function closeDrawer() {
+    drawer.classList.remove("open");
+    drawer.setAttribute("aria-hidden", "true");
+    burger.setAttribute("aria-expanded", "false");
+    document.body.style.overflow = "";
+    if (lastFocus && lastFocus.focus) lastFocus.focus();
+  }
+  burger.addEventListener("click", function () {
+    drawer.classList.contains("open") ? closeDrawer() : openDrawer();
+  });
+  $$("[data-dclose]").forEach(function (el) { el.addEventListener("click", closeDrawer); });
+  document.addEventListener("keydown", function (e) {
+    if (e.key === "Escape" && drawer.classList.contains("open")) closeDrawer();
+  });
+  drawer.querySelectorAll("nav a").forEach(function (a) {
+    a.addEventListener("click", function () { setTimeout(closeDrawer, 80); });
+  });
+
+  var pages = ["home", "about", "services", "contact", "guesthouse", "staff"];
+  function route() {
+    var id = location.hash.replace("#", "").split("/")[0];
+    if (pages.indexOf(id) < 0) id = "home";
+    pages.forEach(function (p) { $("#" + p).classList.toggle("on", p === id); });
+    document.body.classList.toggle("staffmode", id === "staff");
+    document.title = id === "staff" ? "Winners Way Staff" : "Winners Way Church";
+    $$("#nav a").forEach(function (a) {
+      a.getAttribute("href") === "#" + id ? a.setAttribute("aria-current", "page") : a.removeAttribute("aria-current");
+    });
+    if (id !== "staff") window.scrollTo(0, 0);
+    var h = $("#" + id + " h1");
+    if (h) h.focus({ preventScroll: true });
+    if (id === "staff") enterStaff();
+  }
+  window.addEventListener("hashchange", route);
+
+  /* ---------- Helpers ---------- */
+  function esc(s) {
+    return String(s == null ? "" : s).replace(/[&<>"']/g, function (ch) {
+      return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[ch];
+    });
+  }
+  function normPhone(p) {
+    var d = String(p).replace(/\D/g, "");
+    if (d.indexOf("251") === 0 && d.length === 12) d = d.slice(3);
+    else if (d.charAt(0) === "0" && d.length === 10) d = d.slice(1);
+    return /^[79]\d{8}$/.test(d) ? "+251" + d : null;
+  }
+  function store(k, v, s) {
+    var st = s ? sessionStorage : localStorage;
+    try {
+      if (v === undefined) return JSON.parse(st.getItem(k) || "null");
+      if (v === null) st.removeItem(k);
+      else st.setItem(k, JSON.stringify(v));
+    } catch (e) { return null; }
+  }
+  function toast(m, undo) {
+    var el = $("#toast"); el.innerHTML = "";
+    var s = document.createElement("span"); s.textContent = m; el.appendChild(s);
+    if (undo) {
+      var b = document.createElement("button"); b.type = "button"; b.textContent = "Undo";
+      b.onclick = function () { el.hidden = true; undo(); };
+      el.appendChild(b);
+    }
+    el.hidden = false;
+    clearTimeout(toast.h);
+    toast.h = setTimeout(function () { el.hidden = true; }, undo ? 9000 : 3500);
+  }
+  $$("dialog").forEach(function (d) {
+    d.addEventListener("click", function (e) { if (e.target.closest("[data-close]")) d.close(); });
+  });
+
+  /* ---------- Public registration form ---------- */
+  var form = $("#gform"), DRAFT = "ww_draft";
+  function setErr(id, k) { var el = $("#" + id); if (el) el.textContent = k || ""; return !k; }
+  function saveDraft() {
+    var d = { n: $("#fullName").value, p: $("#phone").value, t: $("#topic").value };
+    if (d.n || d.p || d.t) store(DRAFT, d);
+  }
+  var dr = store(DRAFT);
+  if (dr) {
+    $("#fullName").value = dr.n || "";
+    $("#phone").value = dr.p || "";
+    $("#topic").value = dr.t || "";
+    $("#draftNote").hidden = false;
+  }
+  form.addEventListener("input", saveDraft);
+  $("#clearDraft").addEventListener("click", function () {
+    form.reset(); store(DRAFT, null); $("#draftNote").hidden = true;
+  });
+
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+    var name = $("#fullName").value.trim(),
+        phone = normPhone($("#phone").value),
+        topic = $("#topic").value.trim();
+    var ok = setErr("e-name", name.length < 3 ? "Enter your full name." : "");
+    ok = setErr("e-phone", !phone ? "Enter a valid Ethiopian phone number, for example 0911223344." : "") && ok;
+    ok = setErr("e-topic", topic.length < 3 ? "Write your prayer request." : "") && ok;
+    ok = setErr("e-consent", !$("#consent").checked ? "Tick the box to agree before sending." : "") && ok;
+    setErr("e-form", "");
+    if (!ok || $("#website").value) return;
+    var last = store("ww_last_send") || 0;
+    if (Date.now() - last < 60000) return setErr("e-form", "Please wait a minute before sending again.");
+    var btn = $("#send");
+    btn.disabled = true;
+    btn.textContent = "Sending…";
+    function fail(msg) {
+      btn.disabled = false;
+      btn.textContent = "Send registration";
+      setErr("e-form", msg || "We could not send your registration. Check your connection and try again.");
+    }
+    function good() {
+      store("ww_last_send", Date.now());
+      store(DRAFT, null);
+      form.hidden = true;
+      $("#draftNote").hidden = true;
+      $("#done").hidden = false;
+      $("#done").focus();
+    }
+    if (!LIVE) return good();
+    fetch(C.supabaseUrl + "/rest/v1/guests", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        apikey: C.anonKey,
+        Authorization: "Bearer " + C.anonKey,
+        Prefer: "return=minimal"
+      },
+      body: JSON.stringify({ full_name: name, phone: phone, prayer_topic: topic })
+    })
+      .then(function (r) {
+        if (r.ok) return good();
+        if (r.status === 409) return setErr("e-form", "This phone number is already on the waiting list. Please call us.");
+        return r.text().then(function (txt) {
+          fail("Could not send (" + r.status + "): " + (txt.slice(0, 200) || "unknown error"));
+        });
+      })
+      .catch(function (err) { fail("Network error: " + err.message); });
+  });
+
+  /* ---------- Staff: data layer ---------- */
+  var session = null, guests = [], tab = "waiting", pollTimer = null, lastSig = "", lastAct = Date.now(), known = null;
+  var openTL = {}, fails = 0, lockUntil = 0;
+
+  async function api(path, method, body, opts, retried) {
+    opts = opts || {};
+    var r;
+    try {
+      r = await fetch(C.supabaseUrl + "/rest/v1/" + path, {
+        method: method || "GET",
+        headers: {
+          apikey: C.anonKey,
+          Authorization: "Bearer " + session.access_token,
+          "Content-Type": "application/json",
+          Prefer: opts.rep ? "return=representation" : "return=minimal"
+        },
+        body: body ? JSON.stringify(body) : undefined
+      });
+    } catch (e) { throw new Error("Network problem. Check your connection."); }
+    if (r.status === 401 && !retried && await refreshToken()) return api(path, method, body, opts, true);
+    if (r.status === 401) { signOut(); throw new Error("Session expired. Sign in again."); }
+    if (r.status === 403) throw new Error("You do not have permission for this action.");
+    if (r.status === 409) throw new Error("This phone number is already on the active list.");
+    if (!r.ok) {
+      var msg = "";
+      try { msg = (await r.json()).message || ""; } catch (e) {}
+      throw new Error(/full/i.test(msg) ? "The guest house is full. Free a place first." : "Request failed (" + r.status + ").");
+    }
+    return (method || "GET") === "GET" || opts.rep ? r.json() : null;
+  }
+  async function refreshToken() {
+    try {
+      var r = await fetch(C.supabaseUrl + "/auth/v1/token?grant_type=refresh_token", {
+        method: "POST",
+        headers: { apikey: C.anonKey, "Content-Type": "application/json" },
+        body: JSON.stringify({ refresh_token: session.refresh_token })
+      });
+      if (!r.ok) return false;
+      var d = await r.json();
+      setSession({ email: session.email, role: session.role, access_token: d.access_token, refresh_token: d.refresh_token });
+      return true;
+    } catch (e) { return false; }
+  }
+  function setSession(s) { session = s; store("ww_session", s, true); }
+  function roleOf(token) {
+    try {
+      var p = JSON.parse(atob(token.split(".")[1].replace(/-/g, "+").replace(/_/g, "/")));
+      return (p.app_metadata && p.app_metadata.role) || "";
+    } catch (e) { return ""; }
+  }
+
+  async function signIn(email, pass) {
+    if (Date.now() < lockUntil) throw new Error("Too many attempts. Wait a minute and try again.");
+    var r = await fetch(C.supabaseUrl + "/auth/v1/token?grant_type=password", {
+      method: "POST",
+      headers: { apikey: C.anonKey, "Content-Type": "application/json" },
+      body: JSON.stringify({ email: email, password: pass })
+    });
+    var d = await r.json();
+    if (!r.ok) {
+      if (++fails >= 5) { lockUntil = Date.now() + 60000; fails = 0; }
+      throw new Error("Wrong email or password.");
+    }
+    var role = roleOf(d.access_token);
+    if (role !== "staff" && role !== "admin") {
+      fetch(C.supabaseUrl + "/auth/v1/logout", {
+        method: "POST",
+        headers: { apikey: C.anonKey, Authorization: "Bearer " + d.access_token }
+      }).catch(function () {});
+      throw new Error("This account does not have staff access.");
+    }
+    fails = 0;
+    setSession({ email: d.user.email, role: role, access_token: d.access_token, refresh_token: d.refresh_token });
+  }
+  function signOut() {
+    if (session && session.access_token) {
+      fetch(C.supabaseUrl + "/auth/v1/logout", {
+        method: "POST",
+        headers: { apikey: C.anonKey, Authorization: "Bearer " + session.access_token }
+      }).catch(function () {});
+    }
+    setSession(null);
+    clearInterval(pollTimer);
+    guests = []; lastSig = ""; known = null;
+    showLogin();
+  }
+
+  var db = {
+    list: async function () {
+      if (!LIVE) return [];
+      var res = await Promise.all([
+        api("guests?select=*&status=in.(waiting,staying)&order=created_at.asc&limit=1000"),
+        api("guests?select=*&status=in.(completed,cancelled)&order=created_at.desc&limit=300")
+      ]);
+      return res[0].concat(res[1]);
+    },
+    events: async function (id) {
+      return api("guest_events?select=*&guest_id=eq." + encodeURIComponent(id) + "&order=at.asc");
+    },
+    add: async function (g) { await api("guests", "POST", g); },
+    update: async function (g, p) {
+      var rows = await api(
+        "guests?id=eq." + encodeURIComponent(g.id) + "&updated_at=eq." + encodeURIComponent(g.updated_at),
+        "PATCH", p, { rep: true }
+      );
+      if (!rows.length) throw new Error("Someone else changed this record. The list was refreshed.");
+    },
+    remove: async function (g) {
+      await api("guests?id=eq." + encodeURIComponent(g.id), "DELETE");
+    }
+  };
+
+  /* ---------- Staff: views ---------- */
+  function showLogin() {
+    $("#login").hidden = false; $("#app").hidden = true; $("#who").hidden = true;
+  }
+  function enterStaff() {
+    session = store("ww_session", undefined, true);
+    if (session && session.role) {
+      if ($("#app").hidden) showApp();
+    } else showLogin();
+  }
+  function showApp() {
+    $("#login").hidden = true; $("#app").hidden = false; $("#who").hidden = false;
+    $("#email").textContent = session.email + " (" + (session.role || "staff") + ")";
+    lastAct = Date.now();
+    load();
+    clearInterval(pollTimer);
+    pollTimer = setInterval(function () {
+      if (!document.hidden && location.hash.indexOf("#staff") === 0) load();
+    }, C.pollSeconds * 1000);
+  }
+  async function load(manual) {
+    try {
+      var d = await db.list(), sig = JSON.stringify(d);
+      $("#updTxt").textContent = "Updated " + new Date().toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" });
+      if (sig === lastSig) return;
+      lastSig = sig; guests = d;
+      var fresh = known ? guests.filter(function (g) { return !known[g.id] && g.source === "public-website"; }) : [];
+      known = {}; guests.forEach(function (g) { known[g.id] = 1; });
+      render();
+      if (fresh.length) toast("New registration: " + fresh[0].full_name + (fresh.length > 1 ? " (+" + (fresh.length - 1) + ")" : ""));
+    } catch (e) {
+      $("#updTxt").textContent = "Connection issue. Retrying…";
+      if (manual) toast(e.message);
+    }
+  }
+  function fmt(i) { return i ? new Date(i).toLocaleString([], { dateStyle: "medium", timeStyle: "short" }) : "—"; }
+  function ago(i) {
+    var m = Math.floor((Date.now() - new Date(i)) / 6e4);
+    if (m < 1) return "just now";
+    if (m < 60) return m + " min";
+    var h = Math.floor(m / 60);
+    return h < 24 ? h + " h" : Math.floor(h / 24) + " d";
+  }
+  function find(id) { return guests.filter(function (g) { return g.id === id; })[0]; }
+  function inState(s) { return guests.filter(function (g) { return g.status === s; }); }
+  function currentList() {
+    var q = $("#q").value.trim().toLowerCase(), l;
+    if (tab === "history") {
+      l = guests.filter(function (g) { return g.status === "completed" || g.status === "cancelled"; })
+        .sort(function (a, b) { return new Date(b.checked_out_at || b.created_at) - new Date(a.checked_out_at || a.created_at); });
+    } else {
+      l = inState(tab).sort(function (a, b) {
+        return (b.priority ? 1 : 0) - (a.priority ? 1 : 0) || new Date(a.created_at) - new Date(b.created_at);
+      });
+    }
+    if (q) l = l.filter(function (g) {
+      return [g.full_name, g.phone, g.prayer_topic, g.notes, g.room].join(" ").toLowerCase().indexOf(q) > -1;
+    });
+    return l;
+  }
+  function btn(cls, act, label, id) {
+    return '<button type="button" class="btn sm ' + cls + '" data-act="' + act + '" data-id="' + esc(id) + '">' + label + "</button>";
+  }
+  function lnk(act, label, id, bad) {
+    return '<button type="button" class="lnk' + (bad ? " bad" : "") + '" data-act="' + act + '" data-id="' + esc(id) + '">' + label + "</button>";
+  }
+  function row(g, pos) {
+    var chips = "", badge, actions, links = lnk("note", "Note", g.id);
+    if (g.status === "waiting") {
+      badge = "#" + pos;
+      if (g.priority) chips += '<span class="chip gold">Priority</span>';
+      chips += '<span class="chip">Waiting ' + esc(ago(g.created_at)) + "</span>";
+      if (g.contacted_at) chips += '<span class="chip ok">Called</span>';
+      actions = btn("fill", "in", "Check in", g.id);
+      links += lnk("call", g.contacted_at ? "Unmark called" : "Mark called", g.id)
+        + lnk("prio", g.priority ? "Remove priority" : "Priority", g.id)
+        + lnk("cancel", "Remove", g.id, true);
+    } else if (g.status === "staying") {
+      var day = Math.max(1, Math.floor((Date.now() - new Date(g.checked_in_at || g.created_at)) / 864e5) + 1);
+      badge = esc(g.room || "Bed");
+      chips += '<span class="chip gold">Day ' + day + "</span>";
+      if (C.maxStayDays && day > C.maxStayDays) chips += '<span class="chip warn">Over ' + C.maxStayDays + " days</span>";
+      actions = btn("fill", "out", "Check out", g.id);
+      links += lnk("back", "Back to waiting", g.id);
+    } else {
+      badge = g.status === "completed" ? "Done" : "Off";
+      chips += g.status === "completed"
+        ? '<span class="chip ok">Stayed</span>'
+        : '<span class="chip warn">Removed</span>';
+      actions = btn("", "back", "Restore to waiting", g.id);
+      if (session && session.role === "admin") links += lnk("erase", "Erase permanently", g.id, true);
+    }
+    var tl = '<details class="tl" data-tl="' + esc(g.id) + '"' + (openTL[g.id] ? " open" : "") + '><summary>History</summary><ul id="tl-' + esc(g.id) + '"></ul></details>';
+    return '<div class="row' + (g.priority && g.status === "waiting" ? " prio" : "") + '">'
+      + '<div class="badge">' + badge + '</div>'
+      + '<div class="info"><h3>' + esc(g.full_name) + ' · <a href="tel:' + esc(g.phone) + '">' + esc(g.phone) + "</a></h3>"
+      + "<div>" + chips + "</div>"
+      + "<p style='margin:4px 0'>" + esc(g.prayer_topic) + "</p>"
+      + (g.notes ? '<p class="meta" style="margin:0">Note: ' + esc(g.notes) + "</p>" : "")
+      + '<p class="meta" style="margin:4px 0 0">Registered ' + esc(fmt(g.created_at)) + " · " + (g.source === "public-website" ? "Online form" : "Added by staff") + "</p>"
+      + tl
+      + '</div><div class="acts"><div class="r">' + actions + '</div><div class="r">' + links + "</div></div></div>";
+  }
+  function fillTL(id) {
+    var ul = document.getElementById("tl-" + id);
+    if (!ul) return;
+    ul.innerHTML = "<li>Loading…</li>";
+    db.events(id).then(function (ev) {
+      ul.innerHTML = ev.length
+        ? ev.slice().reverse().map(function (e) { return "<li>" + esc(fmt(e.at)) + ": " + esc(e.action) + " (" + esc(e.actor) + ")</li>"; }).join("")
+        : "<li>No changes recorded.</li>";
+    }).catch(function () { ul.innerHTML = "<li>Could not load history.</li>"; });
+  }
+  document.addEventListener("toggle", function (e) {
+    var id = e.target.dataset && e.target.dataset.tl;
+    if (!id) return;
+    openTL[id] = e.target.open;
+    if (e.target.open) fillTL(id);
+  }, true);
+  function render() {
+    var st = inState("staying").length;
+    $("#n-w").textContent = inState("waiting").length;
+    $("#n-s").textContent = C.capacity ? st + " / " + C.capacity : st;
+    $("#n-h").textContent = inState("completed").length;
+    $("#capbar").style.width = C.capacity ? Math.min(100, st / C.capacity * 100) + "%" : "0";
+    var list = currentList(), pos = {};
+    if (tab === "waiting") list.forEach(function (g, i) { pos[g.id] = i + 1; });
+    $("#list").innerHTML = list.length
+      ? list.map(function (g) { return row(g, pos[g.id]); }).join("")
+      : '<div class="empty">' + ($("#q").value ? "No results for your search." : (tab === "waiting" ? "No one is waiting right now. New online registrations appear here automatically." : tab === "staying" ? "No one is staying right now." : "No history yet.")) + "</div>";
+    Object.keys(openTL).forEach(function (id) { if (openTL[id]) fillTL(id); });
+  }
+  function setTab(x) {
+    if (["waiting", "staying", "history"].indexOf(x) < 0) x = "waiting";
+    tab = x;
+    $$("[role=tab]").forEach(function (tb) { tb.setAttribute("aria-selected", tb.dataset.tab === x); });
+    render();
+  }
+  $$("[role=tab]").forEach(function (x) { x.addEventListener("click", function () { setTab(x.dataset.tab); }); });
+  $("#q").addEventListener("input", render);
+
+  /* ---------- Staff: actions ---------- */
+  async function change(g, patch, text, undoPatch) {
+    try {
+      await db.update(g, patch);
+      lastSig = "";
+      await load();
+      toast(text, undoPatch ? function () {
+        var cur = find(g.id) || g;
+        db.update(cur, undoPatch)
+          .then(function () { lastSig = ""; return load(); })
+          .then(function () { toast("Undone"); })
+          .catch(function (e) { toast(e.message); lastSig = ""; load(); });
+      } : null);
+    } catch (e) { toast(e.message); lastSig = ""; load(); }
+  }
+  function snap(g, keys) { var o = {}; keys.forEach(function (k) { o[k] = g[k] === undefined ? null : g[k]; }); return o; }
+  var pending = null;
+
+  function checkIn(g) {
+    if (C.capacity && inState("staying").length >= C.capacity) return toast("The guest house is full. Free a place first.");
+    pending = g.id;
+    $("#roomName").textContent = g.full_name;
+    $("#roomIn").value = g.room || "";
+    $("#dRoom").showModal();
+  }
+  $("#fRoom").addEventListener("submit", function (e) {
+    e.preventDefault();
+    var g = find(pending);
+    $("#dRoom").close();
+    if (!g) return;
+    var room = $("#roomIn").value.trim() || null;
+    change(
+      g,
+      { status: "staying", room: room, checked_in_at: new Date().toISOString(), checked_out_at: null },
+      "Checked in" + (room ? " (" + room + ")" : ""),
+      snap(g, ["status", "room", "checked_in_at", "checked_out_at"])
+    );
+  });
+  $("#fNote").addEventListener("submit", function (e) {
+    e.preventDefault();
+    var g = find(pending);
+    $("#dNote").close();
+    if (!g) return;
+    change(g, { notes: $("#noteIn").value.trim() || null }, "Note updated", snap(g, ["notes"]));
+  });
+  $("#list").addEventListener("click", function (e) {
+    var b = e.target.closest("[data-act]");
+    if (!b) return;
+    var g = find(b.dataset.id);
+    if (!g) return;
+    switch (b.dataset.act) {
+      case "in": checkIn(g); break;
+      case "out": change(g, { status: "completed", checked_out_at: new Date().toISOString() }, "Checked out", snap(g, ["status", "checked_out_at"])); break;
+      case "back": change(g, { status: "waiting", room: null, checked_in_at: null, checked_out_at: null }, "Moved to waiting list", snap(g, ["status", "room", "checked_in_at", "checked_out_at"])); break;
+      case "cancel":
+        if (confirm("Remove this guest from the lists?")) change(g, { status: "cancelled" }, "Removed", snap(g, ["status"]));
+        break;
+      case "call": change(g, { contacted_at: g.contacted_at ? null : new Date().toISOString() }, g.contacted_at ? "Call mark removed" : "Marked as called", snap(g, ["contacted_at"])); break;
+      case "prio": change(g, { priority: !g.priority }, g.priority ? "Priority removed" : "Priority set", snap(g, ["priority"])); break;
+      case "erase":
+        if (confirm("Permanently erase this record? This cannot be undone.")) {
+          db.remove(g).then(function () { lastSig = ""; return load(); })
+            .then(function () { toast("Record erased"); })
+            .catch(function (err) { toast(err.message); });
+        }
+        break;
+      case "note":
+        pending = g.id;
+        $("#noteName").textContent = g.full_name;
+        $("#noteIn").value = g.notes || "";
+        $("#dNote").showModal();
+        break;
+    }
+  });
+  $("#add").addEventListener("click", function () {
+    $("#fAdd").reset();
+    $("#aErr").textContent = "";
+    $("#dAdd").showModal();
+  });
+  $("#fAdd").addEventListener("submit", async function (e) {
+    e.preventDefault();
+    var name = $("#aName").value.trim(),
+        phone = normPhone($("#aPhone").value),
+        topic = $("#aTopic").value.trim(),
+        st = $("#aStatus").value;
+    if (name.length < 3) return ($("#aErr").textContent = "Enter the full name.");
+    if (!phone) return ($("#aErr").textContent = "Enter a valid phone number.");
+    if (topic.length < 3) return ($("#aErr").textContent = "Enter the prayer request.");
+    if (st === "staying" && C.capacity && inState("staying").length >= C.capacity) {
+      return ($("#aErr").textContent = "The guest house is full. Free a place first.");
+    }
+    var g = { full_name: name, phone: phone, prayer_topic: topic, status: st, source: "staff", priority: false };
+    if (st === "staying") g.checked_in_at = new Date().toISOString();
+    try {
+      await db.add(g);
+      $("#dAdd").close();
+      lastSig = "";
+      await load();
+      toast("Saved");
+    } catch (err) { $("#aErr").textContent = err.message; }
+  });
+  $("#csv").addEventListener("click", function () {
+    if (!confirm("This file contains personal data. Store it securely and delete it when no longer needed.")) return;
+    function cell(v) {
+      v = String(v == null ? "" : v);
+      if (/^[=+\-@]/.test(v)) v = "'" + v;
+      return '"' + v.replace(/"/g, '""') + '"';
+    }
+    var rows = [["Name", "Phone", "Prayer request", "Notes", "Status", "Room", "Registered", "Called", "Checked in", "Checked out"]];
+    currentList().forEach(function (g) {
+      rows.push([g.full_name, g.phone, g.prayer_topic, g.notes, g.status, g.room, g.created_at, g.contacted_at, g.checked_in_at, g.checked_out_at]);
+    });
+    var a = document.createElement("a");
+    a.href = URL.createObjectURL(new Blob(
+      ["\ufeff" + rows.map(function (r) { return r.map(cell).join(","); }).join("\n")],
+      { type: "text/csv" }
+    ));
+    a.download = "guest-house-" + tab + "-" + new Date().toISOString().slice(0, 10) + ".csv";
+    a.click();
+  });
+  $("#print").addEventListener("click", function () { window.print(); });
+  $("#refresh").addEventListener("click", function () { load(true); });
+  $("#lform").addEventListener("submit", async function (e) {
+    e.preventDefault();
+    var btn = $("#lbtn");
+    btn.disabled = true;
+    btn.textContent = "Signing in…";
+    $("#lerr").textContent = "";
+    try {
+      await signIn($("#lemail").value.trim(), $("#lpass").value);
+      $("#lpass").value = "";
+      showApp();
+    } catch (err) { $("#lerr").textContent = err.message; }
+    btn.disabled = false;
+    btn.textContent = "Sign in";
+  });
+  $("#out").addEventListener("click", signOut);
+  ["click", "keydown", "touchstart"].forEach(function (ev) {
+    document.addEventListener(ev, function () { lastAct = Date.now(); }, { passive: true });
+  });
+  setInterval(function () {
+    if (session && C.idleMinutes && Date.now() - lastAct > C.idleMinutes * 6e4) {
+      signOut();
+      toast("Signed out after " + C.idleMinutes + " minutes of inactivity.");
+    }
+  }, 30000);
+  $("#lang").addEventListener("click", function () {
+    toast("Amharic coming soon");
+  });
+
+  /* ---------- Boot ---------- */
+  applyLang();
+  route();
+  function applyLang() {}
+})();
+</script>
+
+<!--
+============================================================
+   SUPABASE SETUP — RUN THIS ONCE IN THE SQL EDITOR
+   After signup: turn OFF public sign-ups in Auth settings.
+   Create staff user and set app_metadata {"role":"staff"}
+   (or "admin" for erasing records).
+============================================================
+
+create table settings (id int primary key default 1 check (id = 1), capacity int not null default 10);
+insert into settings default values;
+
+create table guests (
+  id uuid primary key default gen_random_uuid(),
+  full_name text not null check (char_length(full_name) between 3 and 80),
+  phone text not null check (phone ~ '^\+251[79][0-9]{8}$'),
+  prayer_topic text not null check (char_length(prayer_topic) between 3 and 1000),
+  status text not null default 'waiting' check (status in ('waiting','staying','completed','cancelled')),
+  source text not null default 'public-website' check (source in ('public-website','staff')),
+  priority boolean not null default false,
+  room text,
+  notes text,
+  contacted_at timestamptz,
+  checked_in_at timestamptz,
+  checked_out_at timestamptz,
+  consent_at timestamptz not null default now(),
+  created_at timestamptz not null default now(),
+  updated_at timestamptz not null default now()
+);
+create unique index one_active_phone on guests(phone) where status in ('waiting','staying');
+create index guests_status_idx on guests(status, created_at);
+
+create table guest_events (
+  id bigint generated always as identity primary key,
+  guest_id uuid not null references guests(id) on delete cascade,
+  action text not null,
+  actor text,
+  at timestamptz not null default now()
+);
+
+create or replace function is_staff() returns boolean language sql stable as
+  $$ select coalesce(auth.jwt()->'app_metadata'->>'role','') in ('staff','admin') $$;
+create or replace function is_admin() returns boolean language sql stable as
+  $$ select coalesce(auth.jwt()->'app_metadata'->>'role','') = 'admin' $$;
+
+alter table settings enable row level security;
+alter table guests enable row level security;
+alter table guest_events enable row level security;
+revoke all on guests, guest_events, settings from anon, authenticated;
+grant insert (full_name, phone, prayer_topic) on guests to anon;
+grant select, insert, update, delete on guests to authenticated;
+grant select on guest_events to authenticated;
+
+create policy "public register" on guests for insert to anon
+  with check (status = 'waiting' and source = 'public-website' and priority = false);
+create policy "staff read"   on guests for select to authenticated using (is_staff());
+create policy "staff insert" on guests for insert to authenticated with check (is_staff());
+create policy "staff update" on guests for update to authenticated using (is_staff()) with check (is_staff());
+create policy "admin delete" on guests for delete to authenticated using (is_admin());
+create policy "staff read events" on guest_events for select to authenticated using (is_staff());
+
+create or replace function touch() returns trigger language plpgsql as
+  $$ begin new.updated_at = now(); return new; end $$;
+drop trigger if exists guests_touch on guests;
+create trigger guests_touch before update on guests
+  for each row execute function touch();
+
+create or replace function guard_capacity() returns trigger language plpgsql security definer set search_path = public as $$
+begin
+  if new.status = 'staying' and (tg_op = 'INSERT' or old.status is distinct from 'staying') then
+    perform 1 from settings for update;
+    if (select count(*) from guests where status = 'staying') >= (select capacity from settings) then
+      raise exception 'Guest house is full';
+    end if;
+  end if;
+  return new;
+end $$;
+drop trigger if exists guests_capacity on guests;
+create trigger guests_capacity before insert or update on guests
+  for each row execute function guard_capacity();
+
+create or replace function guard_public_insert() returns trigger language plpgsql security definer set search_path = public as $$
+begin
+  if coalesce(auth.jwt()->>'role','') = 'anon'
+     and (select count(*) from guests
+          where source = 'public-website'
+            and created_at > now() - interval '10 minutes') >= 30 then
+    raise exception 'Too many registrations, try again later';
+  end if;
+  return new;
+end $$;
+drop trigger if exists guests_public_guard on guests;
+create trigger guests_public_guard before insert on guests
+  for each row execute function guard_public_insert();
+
+create or replace function audit_guest() returns trigger language plpgsql security definer set search_path = public as $$
+declare who text := coalesce(auth.jwt()->>'email', 'public form');
+begin
+  if tg_op = 'INSERT' then
+    insert into guest_events(guest_id, action, actor) values (
+      new.id,
+      case when new.source = 'public-website' then 'Registered on the website' else 'Registered by staff' end,
+      who
+    );
+  else
+    if new.status is distinct from old.status then
+      insert into guest_events(guest_id, action, actor)
+        values (new.id, 'Status: ' || old.status || ' to ' || new.status, who);
+    end if;
+    if new.priority is distinct from old.priority then
+      insert into guest_events(guest_id, action, actor)
+        values (new.id, case when new.priority then 'Priority set' else 'Priority removed' end, who);
+    end if;
+    if (new.contacted_at is null) <> (old.contacted_at is null) then
+      insert into guest_events(guest_id, action, actor)
+        values (new.id, case when new.contacted_at is null then 'Call mark removed' else 'Marked as called' end, who);
+    end if;
+    if new.notes is distinct from old.notes then
+      insert into guest_events(guest_id, action, actor) values (new.id, 'Note updated', who);
+    end if;
+    if new.room is distinct from old.room then
+      insert into guest_events(guest_id, action, actor) values (new.id, 'Room: ' || coalesce(new.room, 'none'), who);
+    end if;
+  end if;
+  return null;
+end $$;
+drop trigger if exists guests_audit on guests;
+create trigger guests_audit after insert or update on guests
+  for each row execute function audit_guest();
+
+-- After creating a user via the dashboard, set their role:
+-- update auth.users
+--   set raw_app_meta_data = raw_app_meta_data || '{"role":"staff"}'::jsonb
+--   where email = 'staff@winnersway.org';
+============================================================
+-->
+</body>
+</html>
